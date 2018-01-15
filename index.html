@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#slider-range" ).slider({
+                range: true,
+                min: 18,
+                max: 40,
+                values: [ 18, 23 ],
+                slide: function( event, ui ) {
+                    var sliderField =  $( '.ui-slider-handle' );
+                    sliderField.each(function (i) {
+                        $(sliderField[i]).html('<span class="age">' + ui.values[ i ] + '</span>');
+                    });
+                }
+            });
+            $( '.ui-slider-handle' ).each(function (i) {
+                var sliderField =  $( '.ui-slider-handle' );
+                $(sliderField[i]).html('<span class="age">' + $( "#slider-range" ).slider( "values", i ) + '</span>');
+            });
+        } );
+    </script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="text-left">
+            <img src="src/img/logo.png" alt="logo" class="logo">
+            <nav>
+                <div class="mobile-menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <ul class="header-menu">
+                    <li class="menu-item"><a href="#">Поиск</a></li>
+                    <li class="menu-item"><a href="#">Мои переписки</a></li>
+                    <li class="menu-item"><a href="#">Избранное</a></li>
+                    <li class="menu-item"><a href="#">Кто смотрел</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="text-right user-status">
+            <span class="xs-hidden">Премиум</span>
+            <a href="#" class="user-hl info-icon xs-hidden">i</a>
+            <span class="user-hl xs-hidden">100 кредитов</span>
+            <div class="user">
+                <img src="src/img/user-photo.jpg" alt="user-photo">
+                <span class="dropdown-arrow"></span>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="top-girls">
+    <div class="container">
+        <div class="top-girl" style="background-image: url('src/img/girl-1.jpg')"><a href="#"></a></div>
+        <div class="top-girl" style="background-image: url('src/img/girl-2.jpg')"><a href="#"></a></div>
+        <div class="top-girl xs-hidden" style="background-image: url('src/img/girl-3.jpg')"><a href="#"></a></div>
+        <div class="top-girl xs-hidden" style="background-image: url('src/img/girl-4.jpg')"><a href="#"></a></div>
+        <div class="top-girl xs-hidden" style="background-image: url('src/img/girl-5.jpg')"><a href="#"></a></div>
+        <div class="top-girl sm-hidden" style="background-image: url('src/img/girl-6.jpg')"><a href="#"></a></div>
+        <div class="top-girl md-hidden" style="background-image: url('src/img/girl-7.jpg')"><a href="#"></a></div>
+        <div class="top-girl lg-hidden" style="background-image: url('src/img/girl-8.jpg')"><a href="#"></a></div>
+    </div>
+</section>
+<section class="search-section">
+    <div class="container">
+        <h1 class="h1">Я ищу</h1>
+        <form class="search-form">
+            <label>
+                <select class="select-field">
+                    <option>Девушку</option>
+                    <option>Парня</option>
+                </select>
+                <span class="dropdown-arrow"></span>
+            </label>
+
+            <label>
+                <input type="text" placeholder="Город" class="city-field"><span class="clear-field"></span>
+            </label>
+
+            <div class="range-wrap">
+                <span>Возраст</span>
+                <div id="slider-range"></div>
+            </div>
+            <input type="submit" value="Найти" class="search-btn">
+        </form>
+    </div>
+    <hr />
+    <div class="advanced-search">Расширенный поиск <span class="dropdown-arrow"></span></div>
+</section>
+<section class="filter-view">
+    <div class="container">
+        <ul class="filter-view_bar">
+            <li data-href="online">Онлайн</li>
+            <li data-href="new" class="active">Новые</li>
+            <li data-href="top">Популярные</li>
+        </ul>
+        <div id="online" data-target="online" class="filter-view_card-wrapper row" style="display: none">
+            <!--<div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-9.jpg')">
+                        <span class="filter-view_card_photo">12</span>
+                        <span class="filter-view_card_top">TOP</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Кристиночка, 28<span class="online-status online"></span></div>
+                        <div class="user-geo">Санкт-Петербург, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-10.jpg')">
+                        <span class="filter-view_card_photo">3</span>
+                        <span class="filter-view_card_top">TOP</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Диана, 20<span class="online-status online"></span></div>
+                        <div class="user-geo">Самара, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-11.jpg')">
+                        <span class="filter-view_card_photo">145</span>
+                        <span class="filter-view_card_top">TOP</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Аня, 18<span class="online-status online"></span></div>
+                        <div class="user-geo">Ростов-на-Дону, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-13.jpg')">
+                        <span class="filter-view_card_photo">12</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Лариса, 32<span class="online-status online"></span></div>
+                        <div class="user-geo">Москва, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-16.jpg')">
+                        <span class="filter-view_card_photo">28</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Ольга, 25<span class="online-status online"></span></div>
+                        <div class="user-geo">Казань, Россия</div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <div id="new" data-target="new" class="filter-view_card-wrapper row" >
+            <!--<div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-9.jpg')">
+                        <span class="filter-view_card_photo">12</span>
+                        <span class="filter-view_card_top">TOP</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Кристиночка, 28<span class="online-status online"></span></div>
+                        <div class="user-geo">Санкт-Петербург, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-10.jpg')">
+                        <span class="filter-view_card_photo">3</span>
+                        <span class="filter-view_card_top">TOP</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Диана, 20<span class="online-status online"></span></div>
+                        <div class="user-geo">Самара, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-11.jpg')">
+                        <span class="filter-view_card_photo">145</span>
+                        <span class="filter-view_card_top">TOP</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Аня, 18<span class="online-status online"></span></div>
+                        <div class="user-geo">Ростов-на-Дону, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-12.jpg')">
+                        <span class="filter-view_card_photo">17</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Анжелика, 27<span class="online-status"></span></div>
+                        <div class="user-geo">Чебоксары, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-13.jpg')">
+                        <span class="filter-view_card_photo">12</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Лариса, 32<span class="online-status online"></span></div>
+                        <div class="user-geo">Москва, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-14.jpg')">
+                        <span class="filter-view_card_photo">3</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite checked">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Настя, 21<span class="online-status"></span></div>
+                        <div class="user-geo">Зеленоград, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-15.jpg')">
+                        <span class="filter-view_card_photo">4</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Евгения, 30<span class="online-status"></span></div>
+                        <div class="user-geo">Ростов-на-Дону, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-16.jpg')">
+                        <span class="filter-view_card_photo">28</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Ольга, 25<span class="online-status online"></span></div>
+                        <div class="user-geo">Казань, Россия</div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <div id="top" data-target="top" class="filter-view_card-wrapper row" style="display: none">
+            <!--<div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-9.jpg')">
+                        <span class="filter-view_card_photo">12</span>
+                        <span class="filter-view_card_top">TOP</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Кристиночка, 28<span class="online-status online"></span></div>
+                        <div class="user-geo">Санкт-Петербург, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-10.jpg')">
+                        <span class="filter-view_card_photo">3</span>
+                        <span class="filter-view_card_top">TOP</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Диана, 20<span class="online-status online"></span></div>
+                        <div class="user-geo">Самара, Россия</div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="filter-view_card">
+                    <div class="filter-view_card_image" style="background-image: url('src/img/girl-11.jpg')">
+                        <span class="filter-view_card_photo">145</span>
+                        <span class="filter-view_card_top">TOP</span>
+                    </div>
+                    <div class="filter-view_card_fav-chat-bar">
+                        <div class="bar-item favorite">Избранное</div>
+                        <div class="bar-item message">Написать</div>
+                    </div>
+                    <div class="filter-view_card_user-info">
+                        <div class="name">Аня, 18<span class="online-status online"></span></div>
+                        <div class="user-geo">Ростов-на-Дону, Россия</div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div class="pagination">
+        <nav class="pagination-navigation">
+            <ul>
+                <li class="prev"><a href="#"><</a></li>
+                <li class="current"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li class="next"><a href="#">></a></li>
+            </ul>
+        </nav>
+    </div>
+
+</section>
+
+<div id="scroller"></div>
+
+<footer class="footer">
+    <div class="container">
+        <nav class="footer-menu">
+            <ul>
+                <li><a href="#">Правила</a></li>
+                <li><a href="#">Пользовательской соглашение</a></li>
+                <li><a href="#">О проекте</a></li>
+                <li><a href="#">Обратная связь</a></li>
+            </ul>
+        </nav>
+        <div class="footer-info">
+            <p>&copy;«KIKI». Лучший on-line сервис по поиску спонсоров и содержанок, 2015-2017</p>
+            <p>Администрация не несёт ответственности за размещённые анкеты. Вся информация на сайте предоставлена посетителями.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="src/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+.header {
+  height: 80px;
+  background-color: $main-bg;
+}
+.header .container {
+  padding: 20px 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.logo {
+  vertical-align: text-bottom;
+}
+nav {
+  display: inline-block;
+}
+nav>ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu-item {
+  display: inline-block;
+  margin-left: 24px;
+}
+.menu-item a {
+  text-decoration: none;
+  font-size: $header-menu-item-size;
+  color: $header-menu-item-color;
+  line-height: $header-menu-item-line-height;
+  font-family: $header-menu-item-font-family;
+  font-weight: $header-menu-item-font-weight;
+  padding: 6px 2px;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+.user-status {
+  font-size: $header-user-status-size;
+  color: $header-user-status-color;
+  line-height: $header-user-status-line-height;
+  font-family: $header-user-status-font-family;
+  font-weight: $header-user-status-font-weight;
+}
+.user-hl {
+  font-size: $header-user-status-hl-size;
+  color: $header-user-status-hl-color;
+  line-height: $header-user-status-hl-line-height;
+  font-family: $header-user-status-hl-font-family;
+  font-weight: $header-user-status-hl-font-weight;
+  letter-spacing: 1px;
+}
+.info-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #366cf7;
+  border-radius: 50%;
+  padding: 1px;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  margin: 0 14px 0 5px;
+}
+.user {
+  display: inline-block;
+  position: relative;
+  padding-right: 25px;
+  margin-left: 15px;
+  .dropdown-arrow {
+    top: 16px;
+    right: 0;
+    width: 8px;
+    height: 8px;
+  }
+}
+.user img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu {
+  display: none;
+}

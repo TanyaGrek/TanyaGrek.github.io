@@ -1,0 +1,100 @@
+$brand-color: #366cf7;
+
+/* Background */
+$main-bg: #fff;
+$block-bg: #f0f0f0;
+$top-bg: #ff1e6c;
+$online-bg: #01f501;
+
+/*Text*/
+/*heade menu items*/
+$header-menu-item-size: 16px;
+$header-menu-item-color: #333333;
+$header-menu-item-line-height: 2;
+$header-menu-item-font-family: "Roboto", serif;
+$header-menu-item-font-weight: 500;
+
+/*user status - header*/
+$header-user-status-size: 14px;
+$header-user-status-color: #333333;
+$header-user-status-line-height: 2;
+$header-user-status-font-family: "Roboto", serif;
+$header-user-status-font-weight: 400;
+
+/*user status highliter - header*/
+$header-user-status-hl-size: 14px;
+$header-user-status-hl-color: #366cf7;
+$header-user-status-hl-line-height: 2;
+$header-user-status-hl-font-family: "Roboto", serif;
+$header-user-status-hl-font-weight: 500;
+
+/* search title */
+$title-search-page-size: 30px;
+$title-search-page-color: #333333;
+$title-search-page-line-height: 2;
+$title-search-page-font-family: "Roboto", serif;
+$title-search-page-font-weight: 400;
+/*text-filter*/
+$filter-bar-text-size: 16px;
+$filter-bar-text-color: #366cf7;
+$filter-bar-text-line-height: 2;
+$filter-bar-text-font-family: "Roboto", serif;
+$filter-bar-text-font-weight: 500;
+/*text user name*/
+$user-name-text-size: 18px;
+$user-name-text-color: #366cf7;
+$user-name-text-line-height: 1;
+$user-name-text-font-family: "Roboto", serif;
+$user-name-text-font-weight: 500;
+/* pagination */
+$pagination-size: 16px;
+$pagination-color: #999999;
+$pagination-line-height: 1;
+$pagination-font-family: "Roboto", serif;
+$pagination-font-weight: 400;
+/*footer text*/
+$footer-text-size: 12px;
+$footer-text-color: #777777;
+$footer-text-line-height: 1.8;
+$footer-text-font-family: "Roboto", serif;
+$footer-text-font-weight: 400;
+/*footer nav*/
+$footer-nav-size: 14px;
+$footer-nav-color: #777777;
+$footer-nav-line-height: 2;
+$footer-nav-font-family: "Roboto", serif;
+$footer-nav-font-weight: 600;
+/*text-md*/
+$text-md-size: 16px;
+$text-md-color: #333333;
+$text-md-line-height: 2;
+$text-md-font-family: "Roboto", serif;
+$text-md-font-weight: 400;
+
+/*text-sm*/
+$text-sm-size: 14px;
+$text-sm-color: #333333;
+$text-sm-line-height: 2;
+$text-sm-font-family: "Roboto", serif;
+$text-sm-font-weight: 400;
+
+
+
+$container-lg: 1170px;
+
+/* buttons */
+$btn-bg-color-gradient: linear-gradient(45deg, #376cf8, #4e92ff);
+$btn-bg-color-hover: #376cf8;
+$btn-text-size: 14px;
+$btn-text-color: #fff;
+$btn-text-line-height: 2;
+$btn-text-letter-spacing: 2px;
+$btn-text-text-transform: uppercase;
+$btn-text-font-family: "Roboto", serif;
+$btn-text-font-weight: 400;
+
+/*hr line*/
+$line-color: #dcdcdc;
+
+/* card bar */
+$bar-bg-color-gradient: linear-gradient(45deg, #376cf8, #4e92ff);

@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Кристиночка",
+    "age": "28",
+    "geo": "Санкт-Петербург, Россия",
+    "online": true,
+    "top": true,
+    "photos": "12",
+    "avatar": "src/img/girl-9.jpg"
+  },
+  {
+    "name": "Диана",
+    "age": "20",
+    "geo": "Самара, Россия",
+    "online": true,
+    "top": true,
+    "photos": "3",
+    "avatar": "src/img/girl-10.jpg"
+  },
+  {
+    "name": "Аня",
+    "age": "18",
+    "geo": "Ростов-на-Дону, Россия",
+    "online": true,
+    "top": true,
+    "photos": "145",
+    "avatar": "src/img/girl-11.jpg"
+  },
+  {
+    "name": "Анжелика",
+    "age": "27",
+    "geo": "Чебоксары, Россия",
+    "online": false,
+    "top": false,
+    "photos": "17",
+    "avatar": "src/img/girl-12.jpg"
+  },
+
+  {
+    "name": "Лариса",
+    "age": "32",
+    "geo": "Москва, Россия",
+    "online": true,
+    "top": false,
+    "photos": "12",
+    "avatar": "src/img/girl-13.jpg"
+  },
+  {
+    "name": "Настя",
+    "age": "21",
+    "geo": "Зеленоград, Россия",
+    "online": false,
+    "top": false,
+    "photos": "3",
+    "avatar": "src/img/girl-14.jpg"
+  },
+  {
+    "name": "Евгения",
+    "age": "30",
+    "geo": "Ростов-на-Дону, Россия",
+    "online": false,
+    "top": false,
+    "photos": "4",
+    "avatar": "src/img/girl-15.jpg"
+  },
+  {
+    "name": "Ольга",
+    "age": "25",
+    "geo": "Казань, Россия",
+    "online": false,
+    "top": false,
+    "photos": "25",
+    "avatar": "src/img/girl-16.jpg"
+  }
+]

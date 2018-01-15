@@ -1,0 +1,33 @@
+.footer {
+  padding: 30px 0;
+}
+.footer-menu {
+  margin-bottom: 17px;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin-right: 41px;
+      a {
+        font-size: $footer-nav-size;
+        color: $footer-nav-color;
+        line-height: $footer-nav-line-height;
+        font-family: $footer-nav-font-family;
+        font-weight: $footer-nav-font-weight;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+.footer-info {
+  font-size: $footer-text-size;
+  color: $footer-text-color;
+  line-height: $footer-text-line-height;
+  font-family: $footer-text-font-family;
+  font-weight: $footer-text-font-weight;
+  letter-spacing: 0.7px;
+  p {
+    margin: 0;
+  }
+}

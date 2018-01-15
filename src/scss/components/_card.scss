@@ -1,0 +1,89 @@
+.filter-view {
+  &_card {
+    width: 270px;
+    height: 340px;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(145, 142, 142, 0.6);
+    margin-bottom: 28px;
+    &_image {
+      width: 100%;
+      height: 230px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px 20px 0 15px;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+    }
+    &_photo {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      padding: 5px 9px 5px 37px;
+      position: relative;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 400;
+    }
+    &_photo:before {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 20px;
+      background-image: url("../src/img/camera.png");
+      background-repeat: no-repeat;
+      left: 10px;
+      top: 6px;
+    }
+    &_top {
+      background-color: $top-bg;
+      font-size: $text-sm-size;
+      color: #fff;
+      line-height: $text-sm-line-height;
+      font-family: $text-sm-font-family;
+      font-weight: $text-sm-font-weight;
+      padding: 3px 11px 0;
+      border-radius: 5px;
+    }
+    &_fav-chat-bar {
+      background: $bar-bg-color-gradient;
+      width: 100%;
+      height: 40px;
+      color: #fff;
+      letter-spacing: 1px;
+      display: -webkit-flex;
+      display: flex;
+      .bar-item {
+        width: 50%;
+        text-align: center;
+        padding: 7px 0;
+      }
+      .favorite {
+        border-right: 1px solid #7aa4fc;
+      }
+    }
+    &_user-info {
+      padding: 14px 20px;
+      .name {
+        font-size: $user-name-text-size;
+        color: $user-name-text-color;
+        line-height: $user-name-text-line-height;
+        font-family: $user-name-text-font-family;
+        font-weight: $user-name-text-font-weight;
+        letter-spacing: 1px;
+        .online-status.online {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $online-bg;
+          display: inline-block;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}

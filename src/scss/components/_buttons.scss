@@ -1,0 +1,49 @@
+.dropdown-arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid $brand-color;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  top: 8px;
+  right: 20px;
+  transition: all 0.5s ease-in-out;
+}
+.dropdown-arrow.open {
+  transform: rotate(225deg);
+}
+
+.search-btn {
+  width: 170px;
+  height: 50px;
+  color: $btn-text-color;
+  border: none;
+  border-radius: 5px;
+  text-transform: $btn-text-text-transform;
+  letter-spacing: $btn-text-letter-spacing;
+  background: $btn-bg-color-gradient;
+  font-size: $btn-text-size;
+  line-height: $btn-text-line-height;
+  font-family: $btn-text-font-family;
+  font-weight: $btn-text-font-weight;
+}
+.search-btn:hover {
+  background: $btn-bg-color-hover;
+}
+#scroller{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #fff;
+  background-image: url("../src/img/arrow.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display:none;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(149, 147, 147, 0.6);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(149, 147, 147, 0.6);
+  box-shadow: 0px 1px 4px 0px rgba(149, 147, 147, 0.6);
+  border-radius: 50%;
+}
