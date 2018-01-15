@@ -64,6 +64,33 @@
       }
       .favorite {
         border-right: 1px solid #7aa4fc;
+        position: relative;
+        padding-left: 30px;
+        &:before{
+          content: '';
+          position: absolute;
+          background-image: url("../src/img/star.png");
+          background-repeat: no-repeat;
+          width: 20px;
+          height: 20px;
+          top: 10px;
+          left: 14px;
+        }
+      }
+      .message {
+        position: relative;
+        padding-left: 28px;
+        letter-spacing: 0;
+        &:before{
+          content: '';
+          position: absolute;
+          background-image: url("../src/img/letter.png");
+          background-repeat: no-repeat;
+          width: 20px;
+          height: 20px;
+          top: 12px;
+          left: 19px;
+        }
       }
     }
     &_user-info {

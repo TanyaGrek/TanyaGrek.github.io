@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic-ext");
-/*@import '../bootstrap/scss/_normalize.scss';*/
 *,
 *::before,
 *::after {
@@ -1074,7 +1073,31 @@ nav > ul {
       text-align: center;
       padding: 7px 0; }
     .filter-view_card_fav-chat-bar .favorite {
-      border-right: 1px solid #7aa4fc; }
+      border-right: 1px solid #7aa4fc;
+      position: relative;
+      padding-left: 30px; }
+      .filter-view_card_fav-chat-bar .favorite:before {
+        content: '';
+        position: absolute;
+        background-image: url("../src/img/star.png");
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        left: 14px; }
+    .filter-view_card_fav-chat-bar .message {
+      position: relative;
+      padding-left: 28px;
+      letter-spacing: 0; }
+      .filter-view_card_fav-chat-bar .message:before {
+        content: '';
+        position: absolute;
+        background-image: url("../src/img/letter.png");
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        top: 12px;
+        left: 19px; }
   .filter-view_card_user-info {
     padding: 14px 20px; }
     .filter-view_card_user-info .name {
